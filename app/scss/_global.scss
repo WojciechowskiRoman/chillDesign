@@ -3,8 +3,12 @@ html, body {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: $main;
+    line-height: 1.6;
+    background-color: #fff;
 }
 
 main {
@@ -18,7 +22,20 @@ main {
 }
 
 .title {
+    margin-bottom: 37px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: $woodsmoke;
+    text-transform: uppercase;
+}
 
+.subtitle {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    max-width: 552px;
 }
 
 .arrow {

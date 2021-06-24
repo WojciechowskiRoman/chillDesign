@@ -32,12 +32,12 @@ function styles() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
-        // 'node_modules/slick-carousel/slick/slick.js',
-        // 'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
-        // 'node_modules/mixitup/dist/mixitup.js',
-        // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-        // 'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
-        // 'node_modules/rateyo/src/jquery.rateyo.js',
+        'node_modules/mixitup/dist/mixitup.js',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+        // 'node_modules/swiper/swiper-bundle.min.js',
+        // 'node_modules/swiper-animation/build/swiper-animation.js',
+        'node_modules/jquery-scrollify/jquery.scrollify.js',
+        'node_modules/jquery.easing/jquery.easing.js',
         'node_modules/wow.js/dist/wow.js',
         'app/js/main.js'
     ])
