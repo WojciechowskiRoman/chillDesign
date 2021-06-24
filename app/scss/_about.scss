@@ -1,0 +1,47 @@
+.about {
+    @extend %bg;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 600px;
+        height: 1px;
+    }
+
+    &__content {
+        padding: 37px 57px 55px 43px;
+        width: 370px;
+        background-color: rgba($dark, 0.8);
+    }
+
+    &__title {
+        margin-bottom: 87px;
+        position: relative;
+        color: #fff;
+
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: -54px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: $accent;
+        }
+    }
+
+    &__text {
+        margin-bottom: 74px;
+        display: block;
+        color: #fff;
+        font-weight: 500;
+    }
+
+    &__link {
+        padding: 14px;
+        width: 138px;
+        background-color: $accent;
+        color: #fff;
+    }
+}

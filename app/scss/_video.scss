@@ -1,8 +1,7 @@
 .video {
 
     position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @extend %bg;
     height: 100vh;
 
     &__link {

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body id="body">
     <header class="header">
         <div class="container">
             <nav class="header__menu menu">
@@ -18,22 +18,22 @@
                 </a>
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a class="menu__link" href="#">home</a>
+                        <a data-goto="#body" class="menu__link" href="#">home</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">services</a>
+                        <a data-goto="#video" class="menu__link" href="#">services</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">porfolio</a>
+                        <a data-goto="#portfolio" class="menu__link" href="#">porfolio</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">about</a>
+                        <a data-goto="#about" class="menu__link" href="#">about</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">news</a>
+                        <a data-goto="#blog" class="menu__link" href="#">news</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">contact</a>
+                        <a data-goto="#" class="menu__link" href="#">contact</a>
                     </li>
                 </ul>
                 <div class="menu__burger">
@@ -55,7 +55,7 @@
             </div>
         </section>
 
-        <section class="video section" style="background-image: url('../images/design/bg.jpg');">
+        <section id="video" class="video section" style="background-image: url('../images/design/bg.jpg');">
             <div class="container">
                 <div class="wow fadeIn" data-wow-offset="100" data-wow-delay="0.3s">
                     <a class="video__link" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
@@ -71,7 +71,7 @@
             </div>
         </section>
 
-        <section class="portfolio">
+        <section id="portfolio" class="portfolio">
             <div class="container">
                 <h2 class="title">what we done so far</h2>
                 <span class="portfolio__subtitle subtitle">
@@ -80,103 +80,102 @@
                 </span>
                 <ul class="portfolio__filter">
                     <li class="portfolio__filter-item">
-                        <button class="portfolio__button" type="button" data-filter="all">All</button>
+                        <button class="portfolio__button portfolio__button--active" type="button" data-filter="all">All</button>
                     </li>
                     <li class="portfolio__filter-item">
-                        <button class="portfolio__button" type="button" data-filter=".design">Design</button>
+                        <button class="portfolio__button" type="button" data-filter="design">Design</button>
                     </li>
                     <li class="portfolio__filter-item">
-                        <button class="portfolio__button" type="button" data-filter=".code">Code</button>
+                        <button class="portfolio__button" type="button" data-filter="code">Code</button>
                     </li>
                     <li class="portfolio__filter-item">
-                        <button class="portfolio__button" type="button" data-filter=".photography">Photography</button>
+                        <button class="portfolio__button" type="button" data-filter="photography">Photography</button>
                     </li>
                     <li class="portfolio__filter-item">
-                        <button class="portfolio__button" type="button" data-filter=".apps">Apps</button>
+                        <button class="portfolio__button" type="button" data-filter="apps">Apps</button>
                     </li>
                 </ul>
             </div>
 
             <ul class="portfolio__list">
-                <li class="portfolio__box mix design wow fadeInUp" data-wow-offset="10">
+                <li class="portfolio__box design wow fadeInUp" data-item="design" data-wow-offset="10" data-wow-iteration="1">
                     <a href="#" class="portfolio__link">
                         <span class="portfolio__text">project title</span>
                         <span class="portfolio__type">design</span>
                     </a>
                     <img class="portfolio__img" src="images/portfolio/1.jpg" alt="porfolio img">
                 </li>
-                <li class="portfolio__box mix design wow fadeInUp" data-wow-offset="10">
+                <li class="portfolio__box design wow fadeInUp" data-item="design" data-wow-offset="10" data-wow-iteration="1">
                     <a href="#" class="portfolio__link">
                         <span class="portfolio__text">project title</span>
                         <span class="portfolio__type">design</span>
                     </a>
                     <img class="portfolio__img" src="images/portfolio/2.jpg" alt="porfolio img">
                 </li>
-                <li class="portfolio__box mix code wow fadeInUp" data-wow-offset="10">
+                <li class="portfolio__box code wow fadeInUp" data-item="code" data-wow-offset="10" data-wow-iteration="1">
                     <a href="#" class="portfolio__link">
                         <span class="portfolio__text">project title</span>
                         <span class="portfolio__type">code</span>
                     </a>
                     <img class="portfolio__img" src="images/portfolio/3.jpg" alt="porfolio img">
                 </li>
-                <li class="portfolio__box mix photography apps wow fadeInUp" data-wow-offset="10">
+                <li class="portfolio__box photography apps wow fadeInUp" data-item="apps" data-item="photography" data-wow-offset="10" data-wow-iteration="1">
                     <a href="#" class="portfolio__link">
                         <span class="portfolio__text">project title</span>
                         <span class="portfolio__type">photography</span>
                     </a>
                     <img class="portfolio__img" src="images/portfolio/4.jpg" alt="porfolio img">
                 </li>
-                <li class="portfolio__box mix apps photography wow fadeInUp" data-wow-offset="10">
+                <li class="portfolio__box apps wow fadeInUp" data-item="apps" data-wow-offset="10" data-wow-iteration="1">
                     <a href="#" class="portfolio__link">
                         <span class="portfolio__text">project title</span>
                         <span class="portfolio__type">apps</span>
                     </a>
                     <img class="portfolio__img" src="images/portfolio/5.jpg" alt="porfolio img">
                 </li>
-                <li class="portfolio__box mix code wow fadeInUp" data-wow-offset="10">
+                <li class="portfolio__box code wow fadeInUp" data-item="code" data-wow-offset="10" data-wow-iteration="1">
                     <a href="#" class="portfolio__link">
                         <span class="portfolio__text">project title</span>
                         <span class="portfolio__type">code</span>
                     </a>
                     <img class="portfolio__img" src="images/portfolio/3.jpg" alt="porfolio img">
                 </li>
-                <li class="portfolio__box mix apps wow fadeInUp" data-wow-offset="10">
+                <li class="portfolio__box apps wow fadeInUp" data-item="apps" data-wow-offset="10" data-wow-iteration="1">
                     <a href="#" class="portfolio__link">
                         <span class="portfolio__text">project title</span>
                         <span class="portfolio__type">apps</span>
                     </a>
                     <img class="portfolio__img" src="images/portfolio/7.jpg" alt="porfolio img">
                 </li>
-                <li class="portfolio__box mix photography wow fadeInUp" data-wow-offset="10">
+                <li class="portfolio__box photography wow fadeInUp" data-item="photography" data-wow-offset="10" data-wow-iteration="1">
                     <a href="#" class="portfolio__link">
                         <span class="portfolio__text">project title</span>
                         <span class="portfolio__type">photography</span>
                     </a>
                     <img class="portfolio__img" src="images/portfolio/8.jpg" alt="porfolio img">
                 </li>
-
-                <li class="portfolio__box mix apps photography">
+                <li class="portfolio__box apps" data-item="apps">
                     <a href="#" class="portfolio__link">
                         <span class="portfolio__text">project title</span>
                         <span class="portfolio__type">apps</span>
                     </a>
                     <img class="portfolio__img" src="images/portfolio/5.jpg" alt="porfolio img">
                 </li>
-                <li class="portfolio__box mix code">
+                <li class="portfolio__box code" data-item="code">
                     <a href="#" class="portfolio__link">
                         <span class="portfolio__text">project title</span>
                         <span class="portfolio__type">code</span>
                     </a>
                     <img class="portfolio__img" src="images/portfolio/3.jpg" alt="porfolio img">
                 </li>
-                <li class="portfolio__box mix apps">
+                <li class="portfolio__box apps" data-item="apps">
                     <a href="#" class="portfolio__link">
                         <span class="portfolio__text">project title</span>
                         <span class="portfolio__type">apps</span>
                     </a>
                     <img class="portfolio__img" src="images/portfolio/7.jpg" alt="porfolio img">
                 </li>
-                <li class="portfolio__box mix photography">
+                <li class="portfolio__box photography" data-item="photography">
                     <a href="#" class="portfolio__link">
                         <span class="portfolio__text">project title</span>
                         <span class="portfolio__type">photography</span>
@@ -184,14 +183,34 @@
                     <img class="portfolio__img" src="images/portfolio/8.jpg" alt="porfolio img">
                 </li>
             </ul>
-            
 
             <div class="portfolio__more">
                 <span class="portfolio__title title">
                     want to see more?
-                </span>   
-                <button class="portfolio__show portfolio__show--more" type="button"></button>
-                <button class="portfolio__show portfolio__show--less" type="button"></button>
+                </span>
+                <button class="show show--more" type="button"></button>
+                <button class="show show--less" type="button"></button>
+            </div>
+        </section>
+
+        <section id="about" class="about" style="background-image: url('../images/about/bg.jpg');">
+            <div class="container">
+                <div class="about__inner">
+                    <div class="about__content">
+                        <h2 class="about__title title">some words about us</h2>
+                        <span class="about__text">
+                            <p>
+                                Qui quod verear ne. Soluta consequat no
+                                has. Has ex deleniti consulatu, tamquam
+                                interpretaris sit ex, vivendum ullamcorper
+                                et his. Ipsum postea insolens eam an,
+                                mel ne prima clita semper.
+                                Nisl fuisset id nam.
+                            </p>
+                        </span>
+                        <a class="about__link" href="#">Read More</a>
+                    </div>
+                </div>
             </div>
         </section>
 

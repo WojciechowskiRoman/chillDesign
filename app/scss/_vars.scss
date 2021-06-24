@@ -1,7 +1,13 @@
 $main: #8e8e8e;
 $woodsmoke: #131316;
 $accent: #fb5d59;
+$dark: #121215;
 
+%bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
