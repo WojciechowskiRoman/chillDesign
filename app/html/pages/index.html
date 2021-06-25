@@ -18,22 +18,34 @@
                 </a>
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a class="menu__link" href=".body">home</a>
+                        <a class="menu__link" href=".body">
+                            <span>home</span>
+                        </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href=".video">services</a>
+                        <a class="menu__link" href=".video">
+                            <span>services</span>
+                        </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href=".portfolio">porfolio</a>
+                        <a class="menu__link" href=".portfolio">
+                            <span>porfolio</span>
+                        </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href=".about">about</a>
+                        <a class="menu__link" href=".about">
+                            <span>about</span>
+                        </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href=".blog">news</a>
+                        <a class="menu__link" href=".blog">
+                            <span>news</span>
+                        </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">contact</a>
+                        <a class="menu__link" href="#">
+                            <span>contact</span>
+                        </a>
                     </li>
                 </ul>
                 <div class="menu__burger">
@@ -51,7 +63,7 @@
                     <span>awesome theme</span>
                     welcome to chill theme
                 </h1>
-                <a class="top__link" href="#video">
+                <a class="top__link" href=".video">
                     <svg class="top__svg">
                         <rect x="0" y="0" fill="none" width="100%" height="100%" />
                     </svg>
@@ -367,7 +379,7 @@
         </section>
 
         <section class="blog">
-           <div class="blog__bg"></div>
+            <div class="blog__bg"></div>
             <div class="container">
                 <h2 class="blog__title title">our blog stories</h2>
                 <h3 class="blog__subtitle subtitle">
@@ -499,6 +511,57 @@
             </ul>
             <button class="show show--more" id="showBlogMore" type="button"></button>
             <button class="show show--less" id="showBlogLess" type="button"></button>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <h2 class="title">keep in touch</h2>
+                <h3 class="contact__subtitle subtitle">
+                    Soluta consequat no has. Has ex deleniti consulatu, tamquam interpretaris sit ex
+                    no has. Has ex deonsul vivendum ullamcorper et his.
+                </h3>
+                <form class="contact__form" action="#">
+                    <div class="contact__top">
+                        <label class="contact__label">
+                            <input class="contact__input" type="text" required placeholder="Name">
+                        </label>
+                        <label class="contact__label">
+                            <input class="contact__input" type="email" required placeholder="Email">
+                        </label>
+                    </div>
+                    <textarea class="contact__input contact__input--textarea" required placeholder="Message"></textarea>
+                    <button class="contact__button" type="submit">send</button>
+                </form>
+                <ul class="contact__list">
+                    <li class="contact__item">
+                        <span class="contact__icon">
+                            <svg viewBox="0 0 17.688 15.88" width="17.688" height="15.88">
+                                <use xlink:href="images/sprite.svg#google"></use>
+                            </svg>
+                        </span>
+                        <a class="contact__info" href="tel:44443234">44443234</a>
+                    </li>
+                    <li class="contact__item">
+                        <span class="contact__icon">
+                            <svg viewBox="0 0 17.688 15.88" width="17.688" height="15.88">
+                                <use xlink:href="images/sprite.svg#google"></use>
+                            </svg>
+                        </span>
+                        <a class="contact__info" href="mailto:greg@gmail.com">greg@gmail.com</a>
+                    </li>
+                    <li class="contact__item">
+                        <span class="contact__icon">
+                            <svg viewBox="0 0 17.688 15.88" width="17.688" height="15.88">
+                                <use xlink:href="images/sprite.svg#google"></use>
+                            </svg>
+                        </span>
+                        <address>
+                            11 Hill Field St.
+                            East Elmhurst, NY 11370
+                        </address>
+                    </li>
+                </ul>
+            </div>
         </section>
 
     </main>

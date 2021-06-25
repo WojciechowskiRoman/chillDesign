@@ -40,11 +40,12 @@
     }
 
     &__box {
+        // width: 468px;
         flex: 0 1 25%;
         height: 300px;
         position: relative;
         overflow: hidden;
-        animation-delay: calc(0.1s * var(--i));
+        animation-delay: calc(0.05s * var(--i));
 
         &:hover {
             .portfolio__link {
