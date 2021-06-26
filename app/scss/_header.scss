@@ -30,6 +30,22 @@
     &__list {
         display: flex;
         justify-content: space-between;
+
+        @media(max-width: $medium) {
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translate(-50%, -200%);
+            width: 100%;
+            text-align: center;
+            background-color: #fff;
+            transition: transform 0.5s ease-in-out;
+
+            &--active {
+                transform: translate(-50%, 0);
+            }
+        }
     }
 
     &__item {
@@ -45,6 +61,14 @@
         color: $main;
         border: 1px solid transparent;
         transition: border 1s, color 0.3s;
+        
+        @media(max-width: $large) {
+            padding: 14px 10px;
+        }
+
+        @media(max-width: $medium) {
+            display: block;
+        }
 
         &::before, &:after {
             position: absolute;
@@ -97,5 +121,62 @@
 
     &__burger {
         display: none;
+        // overflow: hidden;
+        transition: all 0.5s ease-in-out;
+
+        &--active {
+            .menu__burger-btn {
+                background-color:  transparent;
+                transform: translateX(-50px);
+
+                &::before {
+                    transform: rotate(45deg) translate(32px, -37px);
+                }
+
+                &::after {
+                    transform: rotate(-45deg) translate(37px, 32px);
+                }
+            }
+        }
+
+        @media(max-width: $medium) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+        }
+    }
+
+    &__burger-btn {
+        display: none;
+        transition: all 0.5s ease-in-out;
+
+        @media(max-width: $medium) {
+            position: relative;
+            display: block;
+            width: 40px;
+            height: 4px;
+            border-radius: 10px;
+            background-color: #000;
+
+            &::before, &::after {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+                transition: all 0.5s ease-in-out;
+            }
+
+            &::before {
+                transform: translateY(-12px);
+            }
+
+            &::after {
+                transform: translateY(12px);
+            }
+        }
     }
 }

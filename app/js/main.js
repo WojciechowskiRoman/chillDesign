@@ -5,9 +5,15 @@ $(function() {
         offset:       0,          
         mobile:       false,       
         live:         true   
-    }
-    )
+    })
     wow.init();
+
+    $('.menu__burger, .menu__link').on('click', function() {
+        $('.menu__burger').toggleClass('menu__burger--active');
+        $('.menu__list').toggleClass('menu__list--active');
+        $('.body').toggleClass('lock');
+        $('.overflow').toggleClass('overflow--active');
+    });
 
     $('.filter__button').on('mixitup-control-active', function() {
         $.scrollify.update();
@@ -16,25 +22,6 @@ $(function() {
     $(window).on('scroll', function() {
         $('.header__menu').toggleClass('header__menu--active', $(this).scrollTop() > 0);
     });
-
-    // $.scrollify({
-    //     section : "section",
-    //     sectionName : false,
-    //     interstitialSection : "",
-    //     easing: "easeInOutSine",
-    //     scrollSpeed: 1000,
-    //     offset : 0,
-    //     scrollbars: true,
-    //     standardScrollElements: "",
-    //     setHeights: false,
-    //     overflowScroll: true,
-    //     updateHash: false,
-    //     touchScroll:true,
-    //     before:function(index) {},
-    //     after:function() {},
-    //     afterResize:function() {},
-    //     afterRender:function() {}
-    //   });
 
     let index = 7;
     $('.portfolio__box:gt('+index+')').hide();
@@ -66,30 +53,6 @@ $(function() {
         $('#showBlogMore').css('display', 'block');
         $('#showBlogLess').css('display', 'none');
     });
-
-    
-
-    // const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-
-    // if(menuLinks.length > 0) {
-    //     menuLinks.forEach(menuLink => {
-    //         menuLink.addEventListener('click', onMenuLinkClick);
-    //     });
-
-    //     function onMenuLinkClick(e) {
-    //         const menuLink = e.target;
-    //         if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-    //             const gotoBlock = document.querySelector(menuLink.dataset.goto);
-    //             const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header__menu').offsetHeight;
-
-    //             window.scrollTo({
-    //                 top: gotoBlockValue,
-    //                 behavior: 'smooth',
-    //             });
-    //             e.preventDefault();
-    //         }
-    //     }
-    // }
 
     $("a[href^='.']").on('click', function(){
         var _href = $(this).attr("href");

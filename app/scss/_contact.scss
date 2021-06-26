@@ -2,16 +2,19 @@
 
     padding: 94px 0;
 
+    &__container {
+        max-width: 970px;
+    }
+
     &__subtitle {
         max-width: 654px;
     }
 
     &__form {
-        margin: 0 auto;
+        margin: 0 auto 95px;
         display: flex;
         align-items: center;
         flex-direction: column;
-        max-width: 970px;
         width: 100%;
     }
 
@@ -27,7 +30,6 @@
         &:not(:last-child) {
             margin-right: 28px;
         }
-        
     }
 
     &__input {
@@ -55,15 +57,44 @@
     }
 
     &__list {
+        display: flex;
+        justify-content: space-between;
     }
 
     &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 172px;
     }
 
     &__icon {
+        margin-bottom: 20px;
+        position: relative;
+        display: block;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: $accent;
+    }
+
+    &__svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: #fff;
     }
 
     &__info {
+        font-family: "Montserrat", sans-serif;  
+        color: $dark;
+        font-weight: 700;
+    }
+
+    address {
+        line-height: 1.2;
     }
 }
 .container {

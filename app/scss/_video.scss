@@ -1,57 +1,63 @@
 .video {
 
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @extend %bg;
     height: 100vh;
 
-    &__link {
+    &__content {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 365px;
+        width: 100%;
         background-color: rgba(0,0,0, 0.4);
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-
-        &:hover {
-            .video__icon {
-                width: 25px;
-                height: 27px;
-            }
-        }
     }
 
     &__title {
-        margin-top: 65px;
-        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         color: #fff;
         text-transform: uppercase;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            transform: translateY(-100%);
-            width: 76px;
-            height: 76px;
-            border-radius: 50%;
-            background-color: $accent;
-        }
+        animation-delay: 0.5s;
     }
 
     &__icon {
-        position: absolute;
-        top: -41px;
-        transform: translate(9%, -100%);
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        background-color: $accent;
         fill: #fff;
-        transition: width 0.3s, height 0.3s;
+
+        &:hover {
+            animation: border 2s infinite;
+            .video__svg {
+                animation: pulse 2s infinite;
+            }
+        }
+
+        @keyframes border {
+
+            0% {
+                border: 3px solid transparent;
+            }
+
+            50% {
+                border: 3px solid #fff;
+            }
+
+            100% {
+                border: 3px solid transparent;
+            }
+        }
     }
 
     &__subtitle {

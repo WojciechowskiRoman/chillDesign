@@ -1,0 +1,39 @@
+.footer {
+
+    background-color: #000;
+
+    &__content {
+        padding: 89px 0 19px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__text {
+        margin-bottom: 34px;
+        display: block;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+    }
+
+    &__social {
+        margin-bottom: 40px;
+        display: flex;
+    }
+
+    &__item {
+        
+        &:not(:last-child) {
+            margin-right: 34px;
+        }
+    }
+
+    &__icon {
+        fill: #fff;
+    }
+
+    &__link {
+        fill: #fff;
+    }
+}

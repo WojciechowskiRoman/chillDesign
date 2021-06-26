@@ -43,13 +43,13 @@
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#">
+                        <a class="menu__link" href=".contact">
                             <span>contact</span>
                         </a>
                     </li>
                 </ul>
                 <div class="menu__burger">
-                    <span></span>
+                    <span class="menu__burger-btn"></span>
                 </div>
             </nav>
         </div>
@@ -57,13 +57,13 @@
 
     <main class="page">
 
-        <section class="top" style="background-image: url('../images/header/bg.jpg');">
+        <section class="top wow fadeIn" data-wow-offset="10" style="background-image: url('../images/header/bg.jpg');">
             <div class="container">
-                <h1 class="top__title">
-                    <span>awesome theme</span>
-                    welcome to chill theme
+                <h1 class="top__title wow fadeInDown" data-wow-offset="10">
+                    <span>awesome design</span>
+                    welcome to chill design
                 </h1>
-                <a class="top__link" href=".video">
+                <a class="top__link wow fadeInUp" href=".video">
                     <svg class="top__svg">
                         <rect x="0" y="0" fill="none" width="100%" height="100%" />
                     </svg>
@@ -73,18 +73,18 @@
         </section>
 
         <section class="video" style="background-image: url('../images/design/bg.jpg');">
-            <div class="container">
-                <div class="wow fadeIn" data-wow-offset="200" data-wow-delay="0.3s">
-                    <a class="video__link" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
-                        <h2 class="video__title title">
-                            <svg class="video__icon" viewBox="0 0 19.782 22.22" width="20" height="22">
-                                <use xlink:href="images/sprite.svg#play"></use>
-                            </svg>
-                            play video and be amazed
-                            <span class="video__subtitle">That lovely frames</span>
-                        </h2>
-                    </a>
-                </div>
+            <div class="video__content wow fadeIn" data-wow-offset="200" data-wow-delay="0.3s">
+                <a class="video__link" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk">
+                    <span class="video__icon">
+                        <svg class="video__svg" viewBox="0 0 19.782 22.22" width="20" height="22">
+                            <use xlink:href="images/sprite.svg#play"></use>
+                        </svg>
+                    </span>
+                </a>
+                <h2 class="video__title title wow fadeInLeft">
+                    play video and be amazed
+                    <span class="video__subtitle wow fadeInUp">That lovely frames</span>
+                </h2>
             </div>
         </section>
 
@@ -514,7 +514,7 @@
         </section>
 
         <section class="contact">
-            <div class="container">
+            <div class="container contact__container">
                 <h2 class="title">keep in touch</h2>
                 <h3 class="contact__subtitle subtitle">
                     Soluta consequat no has. Has ex deleniti consulatu, tamquam interpretaris sit ex
@@ -535,27 +535,27 @@
                 <ul class="contact__list">
                     <li class="contact__item">
                         <span class="contact__icon">
-                            <svg viewBox="0 0 17.688 15.88" width="17.688" height="15.88">
-                                <use xlink:href="images/sprite.svg#google"></use>
+                            <svg class="contact__svg" viewBox="0 0 28.376 29.38" width="28.376" height="29.38">
+                                <use xlink:href="images/sprite.svg#phone"></use>
                             </svg>
                         </span>
-                        <a class="contact__info" href="tel:44443234">44443234</a>
+                        <a class="contact__info" href="tel:44443234">444-432-345</a>
                     </li>
                     <li class="contact__item">
                         <span class="contact__icon">
-                            <svg viewBox="0 0 17.688 15.88" width="17.688" height="15.88">
-                                <use xlink:href="images/sprite.svg#google"></use>
+                            <svg class="contact__svg" viewBox="0 0 26 26.18" width="26" height="26.18">
+                                <use xlink:href="images/sprite.svg#mail"></use>
                             </svg>
                         </span>
-                        <a class="contact__info" href="mailto:greg@gmail.com">greg@gmail.com</a>
+                        <a class="contact__info" href="mailto:chill@gmail.com">chill@gmail.com</a>
                     </li>
                     <li class="contact__item">
                         <span class="contact__icon">
-                            <svg viewBox="0 0 17.688 15.88" width="17.688" height="15.88">
-                                <use xlink:href="images/sprite.svg#google"></use>
+                            <svg class="contact__svg" viewBox="0 0 24.59 28.65" width="24.59" height="28.65">
+                                <use xlink:href="images/sprite.svg#address"></use>
                             </svg>
                         </span>
-                        <address>
+                        <address class="contact__info">
                             11 Hill Field St.
                             East Elmhurst, NY 11370
                         </address>
@@ -565,6 +565,52 @@
         </section>
 
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <span class="footer__text">© 2017 - Chill All Right Reserved</span>
+                <ul class="footer__social">
+                    <li class="footer__item">
+                        <a class="footer__icon" href="#">
+                            <svg class="footer__svg" viewBox="0 0 7.969 17.19" width="7.969" height="17.19">
+                                <use xlink:href="images/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__icon" href="#">
+                            <svg class="footer__svg" viewBox="0 0 17.469 14.25" width="17.469" height="14.25">
+                                <use xlink:href="images/sprite.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__icon" href="#">
+                            <svg class="footer__svg" viewBox="0 0 17.562 17.56" width="17.562" height="17.56">
+                                <use xlink:href="images/sprite.svg#dribble"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__icon" href="#">
+                            <svg class="footer__svg" viewBox="0 0 17.688 15.88" width="17.688" height="15.88">
+                                <use xlink:href="images/sprite.svg#google"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <a class="footer__link" href=".body">
+                    <svg class="team__icon" viewBox="0 0 15.594 9.09" width="15.594" height="9.09" height="17.19">
+                        <use xlink:href="images/sprite.svg#arrow"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overflow"></div>
+
     <script src="js/main.min.js"></script>
 </body>
 
