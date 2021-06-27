@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seven</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Chill Design</title>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -13,7 +20,7 @@
     <header class="header">
         <div class="container">
             <nav class="header__menu menu">
-                <a class="logo" href="#body">
+                <a class="logo" href=".body">
                     <img class="logo__img" src="images/logo.png" alt="logo">
                 </a>
                 <ul class="menu__list">
@@ -90,12 +97,12 @@
 
         <section class="portfolio">
             <div class="container">
-                <h2 class="title">what we done so far</h2>
-                <span class="portfolio__subtitle subtitle">
+                <h2 class="title wow fadeInUp" data-wow-offset="100">what we done so far</h2>
+                <span class="portfolio__subtitle subtitle wow fadeInUp" data-wow-offset="100">
                     Soluta consequat no has. Has ex deleniti consulatu, tamquam interpretaris sit ex
                     no has. Has ex deonsul vivendum ullamcorper et his.
                 </span>
-                <ul class="portfolio__filter">
+                <ul class="portfolio__filter wow fadeInUp" data-wow-offset="100">
                     <li class="portfolio__filter-item">
                         <button class="portfolio__button portfolio__button--active" type="button"
                             data-filter="all">All</button>
@@ -140,8 +147,7 @@
                     </a>
                     <img class="portfolio__img" src="images/portfolio/3.jpg" alt="porfolio img">
                 </li>
-                <li class="portfolio__box photography apps wow fadeInUp" style="--i:4" data-item="apps"
-                    data-item="photography" data-wow-offset="10" data-wow-iteration="1">
+                <li class="portfolio__box photography apps wow fadeInUp" style="--i:4" data-item="photography" data-wow-offset="10" data-wow-iteration="1">
                     <a href="#" class="portfolio__link">
                         <span class="portfolio__text">project title</span>
                         <span class="portfolio__type">photography</span>
@@ -219,10 +225,11 @@
             </div>
         </section>
 
-        <section id="about" class="about" style="background-image: url('../images/about/bg.jpg');">
+        <section class="about wow fadeInUp" data-wow-offset="200"
+            style="background-image: url('../images/about/bg.jpg');">
             <div class="container">
                 <div class="about__inner">
-                    <div class="about__content">
+                    <div class="about__content wow fadeInLeft" data-wow-offset="250">
                         <h2 class="about__title title">some words about us</h2>
                         <span class="about__text">
                             <p>
@@ -251,7 +258,7 @@
                     no has. Has ex deonsul vivendum ullamcorper et his.
                 </span>
                 <ul class="team__list">
-                    <li class="team__item">
+                    <li class="team__item wow slideInLeft" data-wow-duration="1.5s" style="--i:3">
                         <div class="team__img-box">
                             <img class="team__img" src="images/team/1.jpg" alt="team person's photo">
                             <div class="team__info">
@@ -292,7 +299,7 @@
                         <h3 class="team__name">Sam Jackson</h3>
                         <h4 class="team__position">Graphic Designer</h4>
                     </li>
-                    <li class="team__item">
+                    <li class="team__item wow slideInLeft" data-wow-duration="1.5s" style="--i:2">
                         <div class="team__img-box">
                             <img class="team__img" src="images/team/1.jpg" alt="team person's photo">
                             <div class="team__info">
@@ -333,7 +340,7 @@
                         <h3 class="team__name">Sam Jackson</h3>
                         <h4 class="team__position">Graphic Designer</h4>
                     </li>
-                    <li class="team__item">
+                    <li class="team__item wow slideInLeft" data-wow-duration="1.5s" style="--i:1">
                         <div class="team__img-box">
                             <img class="team__img" src="images/team/1.jpg" alt="team person's photo">
                             <div class="team__info">
@@ -381,17 +388,17 @@
         <section class="blog">
             <div class="blog__bg"></div>
             <div class="container">
-                <h2 class="blog__title title">our blog stories</h2>
-                <h3 class="blog__subtitle subtitle">
+                <h2 class="blog__title title wow fadeInUp" data-wow-offset="100">our blog stories</h2>
+                <h3 class="blog__subtitle subtitle wow fadeInUp" data-wow-offset="100">
                     Soluta consequat no has. Has ex deleniti consulatu, tamquam
                     interpretaris sit ex
                     no has. Has ex deonsul vivendum ullamcorper et his.</h3>
             </div>
             <ul class="blog__list">
-                <li class="blog__item">
-                    <div class="blog__img-box">
+                <li class="blog__item wow fadeInUp" data-wow-offset="10" style="--i:1">
+                    <a class="blog__img-box" href="#">
                         <img class="blog__img" src="images/portfolio/1.jpg" alt="">
-                    </div>
+                    </a>
                     <div class="blog__content">
                         <span class="blog__name">
                             awesome blog title
@@ -408,10 +415,10 @@
                         <a class="blog__link" href="#">Read more...</a>
                     </div>
                 </li>
-                <li class="blog__item">
-                    <div class="blog__img-box">
+                <li class="blog__item wow fadeInUp" data-wow-offset="10" style="--i:2">
+                    <a class="blog__img-box" href="#">
                         <img class="blog__img" src="images/portfolio/2.jpg" alt="">
-                    </div>
+                    </a>
                     <div class="blog__content">
                         <span class="blog__name">
                             awesome blog title
@@ -428,10 +435,10 @@
                         <a class="blog__link" href="#">Read more...</a>
                     </div>
                 </li>
-                <li class="blog__item">
-                    <div class="blog__img-box">
+                <li class="blog__item wow fadeInUp" data-wow-offset="10" style="--i:3">
+                    <a class="blog__img-box" href="#">
                         <img class="blog__img" src="images/portfolio/3.jpg" alt="">
-                    </div>
+                    </a>
                     <div class="blog__content">
                         <span class="blog__name">
                             awesome blog title
@@ -449,9 +456,9 @@
                     </div>
                 </li>
                 <li class="blog__item">
-                    <div class="blog__img-box">
+                    <a class="blog__img-box" href="#">
                         <img class="blog__img" src="images/portfolio/1.jpg" alt="">
-                    </div>
+                    </a>
                     <div class="blog__content">
                         <span class="blog__name">
                             awesome blog title
@@ -469,9 +476,9 @@
                     </div>
                 </li>
                 <li class="blog__item">
-                    <div class="blog__img-box">
+                    <a class="blog__img-box" href="#">
                         <img class="blog__img" src="images/portfolio/2.jpg" alt="">
-                    </div>
+                    </a>
                     <div class="blog__content">
                         <span class="blog__name">
                             awesome blog title
@@ -489,9 +496,9 @@
                     </div>
                 </li>
                 <li class="blog__item">
-                    <div class="blog__img-box">
+                    <a class="blog__img-box" href="#">
                         <img class="blog__img" src="images/portfolio/3.jpg" alt="">
-                    </div>
+                    </a>
                     <div class="blog__content">
                         <span class="blog__name">
                             awesome blog title
@@ -515,12 +522,12 @@
 
         <section class="contact">
             <div class="container contact__container">
-                <h2 class="title">keep in touch</h2>
-                <h3 class="contact__subtitle subtitle">
+                <h2 class="title title wow fadeInUp" data-wow-offset="100">keep in touch</h2>
+                <h3 class="contact__subtitle subtitle title wow fadeInUp" data-wow-offset="150">
                     Soluta consequat no has. Has ex deleniti consulatu, tamquam interpretaris sit ex
                     no has. Has ex deonsul vivendum ullamcorper et his.
                 </h3>
-                <form class="contact__form" action="#">
+                <form class="contact__form wow fadeIn" data-wow-offset="200" action="#">
                     <div class="contact__top">
                         <label class="contact__label">
                             <input class="contact__input" type="text" required placeholder="Name">
@@ -530,32 +537,39 @@
                         </label>
                     </div>
                     <textarea class="contact__input contact__input--textarea" required placeholder="Message"></textarea>
-                    <button class="contact__button" type="submit">send</button>
+                    <button class="contact__button" type="submit">
+                        <span>send</span>
+                        <span>send</span>
+                    </button>
                 </form>
                 <ul class="contact__list">
                     <li class="contact__item">
-                        <span class="contact__icon">
-                            <svg class="contact__svg" viewBox="0 0 28.376 29.38" width="28.376" height="29.38">
-                                <use xlink:href="images/sprite.svg#phone"></use>
-                            </svg>
-                        </span>
-                        <a class="contact__info" href="tel:44443234">444-432-345</a>
+                        <a class="contact__info" href="tel:44443234">
+                            <span class="contact__icon">
+                                <svg class="contact__svg" viewBox="0 0 28.376 29.38" width="28.376" height="29.38">
+                                    <use xlink:href="images/sprite.svg#phone"></use>
+                                </svg>
+                            </span>
+                            444-432-345
+                        </a>
                     </li>
                     <li class="contact__item">
-                        <span class="contact__icon">
-                            <svg class="contact__svg" viewBox="0 0 26 26.18" width="26" height="26.18">
-                                <use xlink:href="images/sprite.svg#mail"></use>
-                            </svg>
-                        </span>
-                        <a class="contact__info" href="mailto:chill@gmail.com">chill@gmail.com</a>
+                        <a class="contact__info" href="mailto:chill@gmail.com">
+                            <span class="contact__icon">
+                                <svg class="contact__svg" viewBox="0 0 26 26.18" width="26" height="26.18">
+                                    <use xlink:href="images/sprite.svg#mail"></use>
+                                </svg>
+                            </span>
+                            chill@gmail.com
+                        </a>
                     </li>
                     <li class="contact__item">
-                        <span class="contact__icon">
-                            <svg class="contact__svg" viewBox="0 0 24.59 28.65" width="24.59" height="28.65">
-                                <use xlink:href="images/sprite.svg#address"></use>
-                            </svg>
-                        </span>
                         <address class="contact__info">
+                            <span class="contact__icon">
+                                <svg class="contact__svg" viewBox="0 0 24.59 28.65" width="24.59" height="28.65">
+                                    <use xlink:href="images/sprite.svg#address"></use>
+                                </svg>
+                            </span>
                             11 Hill Field St.
                             East Elmhurst, NY 11370
                         </address>
@@ -601,7 +615,7 @@
                     </li>
                 </ul>
                 <a class="footer__link" href=".body">
-                    <svg class="team__icon" viewBox="0 0 15.594 9.09" width="15.594" height="9.09" height="17.19">
+                    <svg class="footer__icon" viewBox="0 0 15.594 9.09" width="15.594" height="9.09">
                         <use xlink:href="images/sprite.svg#arrow"></use>
                     </svg>
                 </a>

@@ -9,15 +9,24 @@ body {
     color: $main;
     line-height: 1.6;
     background-color: #fff;
-    // overflow: hidden;
 }
 
 main {
     margin-top: 120px;
     flex-grow: 1;
+
+    @media(max-width: $medium) {
+        margin-top: 90px;
+    }
+
+    @media(max-width: $small-phone) {
+        margin-top: 70px;
+    }
 }
+
 button {
     cursor: pointer;
+    outline: transparent;
     background-color: $accent;
 }
 
@@ -29,33 +38,25 @@ button {
 
 .title {
     margin-bottom: 37px;
-    font-size: 20px;
+    font-size: 23px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-align: center;
     color: $woodsmoke;
     text-transform: uppercase;
+
+    @media(max-width: $medium) {
+        margin-bottom: 30px;
+        font-size: 21px
+    }
 }
 
 .subtitle {
     margin: 0 auto 94px;
     display: block;
-    text-align: center;
     max-width: 560px;
-}
-
-.arrow {
-    display: none;
-    position: fixed;
-    right: 15px;
-    bottom: 85px;
-    z-index: 9;
-    opacity: 0.7;
-    transition: opacity 0.5s;
-
-    &:hover {
-        opacity: 1;
-    }
+    text-align: center;
+    font-size: 15px;
 }
 
 .sr-only {
@@ -92,6 +93,12 @@ button {
 
 .logo {
     z-index: 3;
+
+    &__img {
+        @media(max-width: $medium) {
+            max-width: 80%;
+        }
+    }
 }
 
 .show {
@@ -130,6 +137,28 @@ button {
 
         &::after {
             content: none;
+        }
+    }
+
+    &:hover {
+        animation: pulse 1.5s infinite;
+
+        &::before, &:after {
+            animation: color 1.5s infinite;
+        }
+
+        @keyframes color {
+            0% {
+                background-color: #000;
+            }
+            
+            50% {
+                background-color: #fff;
+            }
+
+            100% {
+                background-color: #000;
+            }
         }
     }
 }

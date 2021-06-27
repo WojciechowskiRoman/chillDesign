@@ -19,6 +19,35 @@ $large: 1200px;
 
 $extra-large: 1400px;
 
+%limit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+%two-lines {
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 100%;
+    background-color: #ff0600;
+    transition: width 0.3s ease-in-out;
+}
+
+&::before {
+    left: 0;
+}
+
+&::after {
+    right: 0;
+}
+}
+
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
   }

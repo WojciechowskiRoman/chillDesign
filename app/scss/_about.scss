@@ -1,5 +1,4 @@
 .about {
-    margin-top: 65px;
     @extend %bg;
 
     &__inner {
@@ -8,27 +7,46 @@
         justify-content: flex-start;
         min-height: 600px;
         height: 1px;
+
+        @media(max-width: $small-phone) {
+            min-height: 510px;
+        }
     }
 
     &__content {
         padding: 37px 57px 55px 43px;
         width: 370px;
         background-color: rgba($dark, 0.8);
+
+        @media(max-width: $small-phone) {
+            padding: 30px 15px 30px 15px;
+        }
     }
 
     &__title {
         margin-bottom: 87px;
         position: relative;
+        text-align: left;
+        font-size: 20px;
         color: #fff;
+
+        @media(max-width: $small-phone) {
+            margin-bottom: 40px;
+            font-size: 19px;
+        }
 
         &::after {
             position: absolute;
             content: '';
-            bottom: -54px;
+            bottom: -43px;
             left: 0;
             width: 60px;
             height: 2px;
             background-color: $accent;
+
+            @media(max-width: $small-phone) {
+               bottom: -20px;
+            }
         }
     }
 
@@ -37,6 +55,10 @@
         display: block;
         color: #fff;
         font-weight: 500;
+
+        @media(max-width: $small-phone) {
+            margin-bottom: 30px;
+        }
     }
 
     &__link {
@@ -50,24 +72,8 @@
         background-color: $accent;
         color: #fff;
         overflow: hidden;
+        @extend %two-lines;
         transition: color 0.3s, box-shadow 0.3s;
-
-        &::before, &::after {
-            position: absolute;
-            content: '';
-            width: 4px;
-            height: 100%;
-            background-color: #ff0600;
-            transition: width 0.3s ease-in-out;
-        }
-
-        &::before {
-            left: 0;
-        }
-
-        &::after {
-            right: 0;
-        }
 
         &:hover {
             &::before, &:after {

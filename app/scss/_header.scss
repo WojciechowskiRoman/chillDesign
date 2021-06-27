@@ -22,6 +22,14 @@
         &--active {
             padding: 10px 12px 10px;
         }
+
+        @media(max-width: $medium) {
+            padding: 20px 12px 20px;
+        }
+
+        @media(max-width: $small-phone) {
+            padding: 10px 12px 10px;
+        }
     }
 }
 
@@ -32,11 +40,12 @@
         justify-content: space-between;
 
         @media(max-width: $medium) {
-            display: block;
+            padding-top: 20px;
             position: absolute;
             left: 50%;
             top: 100%;
             transform: translate(-50%, -200%);
+            display: block;
             width: 100%;
             text-align: center;
             background-color: #fff;
@@ -52,6 +61,13 @@
         text-transform: uppercase;
         &:not(:last-child) {
             margin-right: 10px;
+        }
+
+        @media(max-width: $medium) {
+            margin-bottom: 10px;
+            &:not(:last-child) {
+                margin-right: 0;
+            }
         }
     }
 
@@ -121,7 +137,6 @@
 
     &__burger {
         display: none;
-        // overflow: hidden;
         transition: all 0.5s ease-in-out;
 
         &--active {
@@ -151,7 +166,7 @@
 
     &__burger-btn {
         display: none;
-        transition: all 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out, background-color 0.5s;
 
         @media(max-width: $medium) {
             position: relative;
@@ -166,8 +181,9 @@
                 content: '';
                 width: 100%;
                 height: 100%;
+                border-radius: 10px;
                 background-color: #000;
-                transition: all 0.5s ease-in-out;
+                transition: transform 0.5s ease-in-out;
             }
 
             &::before {

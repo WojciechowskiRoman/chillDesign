@@ -7,6 +7,10 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+
+        @media(max-width: $medium) {
+            padding: 50px 0 19px;
+        }
     }
 
     &__text {
@@ -18,12 +22,11 @@
     }
 
     &__social {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         display: flex;
     }
 
     &__item {
-        
         &:not(:last-child) {
             margin-right: 34px;
         }
@@ -33,7 +36,42 @@
         fill: #fff;
     }
 
+    &__svg {
+        transition: transform 0.3s, fill 0.3s;
+
+        &:hover {
+            transform: scale(1.3);
+            fill: $accent;
+        }
+
+        &:active {
+            fill: rgba($accent, 0.8);
+        }
+    }
+
     &__link {
+        padding: 10px;
         fill: #fff;
+
+        &:hover {
+            .footer__icon {
+                animation: top-down 2s infinite;
+                fill: $accent;
+            }
+        }
+
+        @keyframes top-down {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
     }
 }

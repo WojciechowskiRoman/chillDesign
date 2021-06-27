@@ -1,23 +1,27 @@
 $(function() {
+    
     wow = new WOW({
         boxClass:     'wow',      
         animateClass: 'animated', 
         offset:       0,          
-        mobile:       false,       
+        mobile:       true,       
         live:         true   
-    })
+    });
+    
     wow.init();
 
     $('.menu__burger, .menu__link').on('click', function() {
-        $('.menu__burger').toggleClass('menu__burger--active');
-        $('.menu__list').toggleClass('menu__list--active');
-        $('.body').toggleClass('lock');
-        $('.overflow').toggleClass('overflow--active');
+        if( window.innerWidth <= 768 ){
+            $('.menu__burger').toggleClass('menu__burger--active');
+            $('.menu__list').toggleClass('menu__list--active');
+            $('.body').toggleClass('lock');
+            $('.overflow').toggleClass('overflow--active');
+        }
     });
 
     $('.filter__button').on('mixitup-control-active', function() {
         $.scrollify.update();
-    })
+    });
 
     $(window).on('scroll', function() {
         $('.header__menu').toggleClass('header__menu--active', $(this).scrollTop() > 0);
@@ -40,6 +44,7 @@ $(function() {
     });
 
     let blog = 2;
+
     $('.blog__item:gt('+ blog +')').hide();
     
     $('#showBlogMore').on('click', function() {
@@ -82,6 +87,6 @@ $(function() {
                     item[k].classList.add('active');
                 }
             }
-        })
+        });
     }
 });

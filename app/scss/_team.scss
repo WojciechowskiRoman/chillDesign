@@ -2,8 +2,20 @@
 
     padding: 92px 0 98px;
 
+    @media(max-width: $tablet) {
+        padding: 70px 0 50px;
+    }
+
+    @media(max-width: $medium) {
+        padding: 55px 0 20px
+    }
+
     &__subtitle {
         margin-bottom: 60px;
+
+        @media(max-width: $medium) {
+            margin-bottom: 45px;
+        }
     }
 
     &__list {
@@ -20,6 +32,11 @@
         width: 370px;
         text-align: center;
         transition: opacity 0.3s;
+        animation-delay: calc(0.3s * var(--i));
+
+        @media(max-width: $medium) {
+            animation-delay: 0s;
+        }
 
         &:hover {
             opacity: 1;
@@ -30,6 +47,10 @@
         margin-bottom: 33px;
         position: relative;
         height: 530px;
+
+        @media(max-width: $small-phone) {
+            height: 460px;
+        }
     }
 
     &__img {
@@ -45,11 +66,19 @@
         background-color: rgba($dark, 0.8);
         text-align: center;
         color: #fff;
+
+        @media(max-width: $small-phone) {
+            padding: 20px 13px;
+        }
     }
 
     &__text {
         margin-bottom: 30px;
         display: block;
+
+        @media(max-width: $small-phone) {
+            margin-bottom: 20px;
+        }
     }
 
     &__social {
@@ -62,9 +91,16 @@
 
         &:hover {
             .team__icon {
-                transform: scale(1.2);
+                transform: scale(1.3);
                 fill: $accent;
             }
+        }
+
+        &:active {
+            .team__icon {
+                fill: rgba($accent, 0.8);
+            }
+
         }
     }
 
